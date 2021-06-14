@@ -50,6 +50,7 @@ body {
     margin: 10px 8px 10px 0;
     display: block;
     /* width: 30px; */
+    text-decoration: none;
 }
 
 
@@ -247,9 +248,10 @@ main {
 }
 
 .post-item__date {
-    font-size: 10px;
+    /* font-size: 10px; */
     text-transform: uppercase;
     color: #999;
+    line-height: 44px;
 }
 
 .post-item__date__author {

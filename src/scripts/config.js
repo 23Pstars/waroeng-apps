@@ -1,6 +1,7 @@
 const config = {
     site: {
-        title: 'dWaroeng\'s Portal'
+        title: 'Waroeng\'s Portal',
+        company: 'Waroeng Inc.'
     },
     hero: {
         title: 'The best cureated Cafes in Town',

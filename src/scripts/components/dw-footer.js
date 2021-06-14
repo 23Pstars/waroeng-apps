@@ -6,7 +6,7 @@ class DWFooter extends HTMLElement {
         this.innerHTML = `
             <footer>
                 <div class="copyright">
-                    Copyright &copy; 2021 - ${config.site.title}
+                    Copyright &copy; 2021 - ${config.site.company}
                 </div>
             </footer>
         `;

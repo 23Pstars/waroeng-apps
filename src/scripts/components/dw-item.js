@@ -16,10 +16,10 @@ class DWItem extends HTMLElement {
                     <p class="post-item__date">
                         ⭐️ ${this._data.rating}
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#">${this._data.city}</a>
+                        <strong>${this._data.city}</strong>
                     </p>
                     <h1 class="post-item__title">
-                        <a href="#">${this._data.name}</a>
+                        ${this._data.name}
                     </h1>
                     <p class="post-item__description">
                         ${this._data.description}
