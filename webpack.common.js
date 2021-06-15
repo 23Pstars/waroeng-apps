@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -22,10 +24,10 @@ module.exports = {
         ],
       },
       {
-          test: /\.(png|svg|jpg|jpeg|gif)$/,
-          use: [
-              'file-loader',
-          ],
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
@@ -42,5 +44,9 @@ module.exports = {
         },
       ],
     }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, 'src/public/images/favicon.png'),
+    }),
+    new CleanWebpackPlugin(),
   ],
 };

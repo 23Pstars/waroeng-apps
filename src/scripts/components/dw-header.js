@@ -9,7 +9,7 @@ class DWHeader extends HTMLElement {
                     <h1 class="header__title">
                         ${config.site.title}
                     </h1>
-                    <a href="#" id="menu" class="header__menu">☰</a>
+                    <a aria-label="Menu" href="#" id="menu" class="header__menu">☰</a>
                     <nav id="drawer" class="nav">
                         <ul class="nav__list">
                             <li class="nav__item"><a href="/">Home</a></li>
