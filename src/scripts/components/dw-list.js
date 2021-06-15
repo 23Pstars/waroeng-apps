@@ -1,4 +1,4 @@
-import './dw-item';
+import config from '../global/config';
 
 class DWList extends HTMLElement {
 

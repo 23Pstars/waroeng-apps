@@ -1,4 +1,9 @@
 const config = {
+    api: {
+        restaurant: {
+            url: 'https://restaurant-api.dicoding.dev/'
+        }
+    },
     site: {
         title: 'Waroeng\'s Portal',
         company: 'Waroeng Inc.'

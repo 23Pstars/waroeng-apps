@@ -1,4 +1,4 @@
-import config from '../config';
+import config from '../global/config';
 
 class DWFooter extends HTMLElement {
 

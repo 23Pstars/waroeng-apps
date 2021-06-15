@@ -5,6 +5,7 @@ import '../scripts/components/dw-header.js';
 import '../scripts/components/dw-hero.js';
 import '../scripts/components/dw-list.js';
 import '../scripts/components/dw-footer.js';
+import RestaurantSource from './data/restaurant-source';
 
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');
@@ -31,3 +32,6 @@ const list = document.querySelector('dw-list');
 fetch('../DATA.json')
     .then(response => response.json())
     .then(data => list.value = data.restaurants);
+
+const _lists = RestaurantSource.list();
+console.log(_lists);
