@@ -1,37 +1,23 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
-import '../scripts/components/dw-header.js';
-import '../scripts/components/dw-hero.js';
-import '../scripts/components/dw-list.js';
-import '../scripts/components/dw-footer.js';
-import RestaurantSource from './data/restaurant-source';
+import './views/components/dw-header';
+import './views/components/dw-hero';
+import './views/components/dw-footer';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-menu.addEventListener('click', function (event) {
-    drawer.classList.toggle('open');
-    event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#main'),
 });
 
-hero.addEventListener('click', function () {
-    drawer.classList.remove('open');
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
-main.addEventListener('click', function () {
-    drawer.classList.remove('open');
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
 });
-
-
-
-const list = document.querySelector('dw-list');
-
-fetch('../DATA.json')
-    .then(response => response.json())
-    .then(data => list.value = data.restaurants);
-
-const _lists = RestaurantSource.list();
-console.log(_lists);
