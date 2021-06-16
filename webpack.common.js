@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 
 module.exports = {
@@ -51,6 +52,23 @@ module.exports = {
     new CleanWebpackPlugin(),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
+    new WebpackPwaManifest({
+      name: 'Waroeng\'s Portal',
+      short_name: 'Waroeng',
+      description: 'The best cureated Cafes in Town',
+      background_color: '#ffffff',
+      theme_color: '#d84315',
+      start_url: './index.html',
+      display: 'standalone',
+      icons: [
+        {
+          src: path.resolve('src/public/images/favicon.png'),
+          sizes: [72, 96, 128, 144, 152, 192, 256, 384, 512],
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
     }),
   ],
 };

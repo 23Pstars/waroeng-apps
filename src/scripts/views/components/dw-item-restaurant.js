@@ -13,9 +13,11 @@ class DWItemRestaurant extends HTMLElement {
                 alt="${this._data.name}">
             <div class="post-item__content">
                 <p class="post-item__date">
-                    ⭐️ ${this._data.rating}
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    &nbsp;${this._data.rating}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <strong>${this._data.city}</strong>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    &nbsp;${this._data.city}
                 </p>
                 <h1 class="post-item__title">
                     <a href="${`/#/detail/${this._data.id}`}">

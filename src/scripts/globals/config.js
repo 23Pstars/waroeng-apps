@@ -18,7 +18,7 @@ const config = {
     },
   },
   site: {
-    title: 'Waroeng\'s Portal',
+    title: 'Waroeng',
     company: 'Waroeng Inc.',
   },
   hero: {

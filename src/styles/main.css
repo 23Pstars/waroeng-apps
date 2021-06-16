@@ -13,9 +13,9 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  color: #424242;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  min-height: 100vh;
 }
 
 /*
@@ -115,7 +115,8 @@ body {
 }
 
 .hero__title {
-  color: #999;
+  color: #fff;
+  text-shadow: 2px 2px black;
   font-weight: 500;
   font-size: 36px;
 }
@@ -289,7 +290,7 @@ main {
 }
 
 .post {
-  margin: 0 auto;
+  margin: 32px auto;
   width: 100%;
   max-width: 800px;
   display: grid;
@@ -297,13 +298,54 @@ main {
   gap: 18px 16px;
 }
 
-.post .post-item__poster {
+.post .post__poster {
   width: 100%;
   max-width: 400px;
 }
 
-.post .post-item__info h4 {
+.post .post__info h4 {
   margin: 8px 0;
+}
+
+.post .post__overview h4 {
+  margin: 8px 0;
+}
+
+.post .post__overview h3 {
+  margin: 16px 0;
+}
+
+/*
+ * review
+ */
+
+.post__reviews {
+  border: solid thin #aaa;
+  padding: 3px 16px;
+}
+
+.post__reviews .review-item {
+  padding: 8px 0;
+  border-bottom: solid thin #ddd;
+}
+
+.post__reviews .review-item:last-child {
+  border: none;
+}
+
+.post__reviews .review-item .title {
+  font-weight: bold;
+}
+
+.post__reviews .review-item .title span {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: italic;
+  padding-left: 8px;
+}
+
+.post__reviews .review-item .comment {
+  font-size: 12px;
 }
 
 /*

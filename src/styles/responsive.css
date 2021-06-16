@@ -1,20 +1,23 @@
-.posts {
-    display: grid;
-    grid-row-gap: 16px;
-}
+@media screen and (min-width: 650px) {
 
-.post {
-    grid-template-columns: auto 1fr;
-}
+    .posts {
+        display: grid;
+        grid-row-gap: 16px;
+    }
 
-.post .post__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.post .post__overview {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    .post {
+        grid-template-columns: auto 1fr;
+    }
+    
+    .post .post__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .post .post__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media screen and (max-width: 499px) {

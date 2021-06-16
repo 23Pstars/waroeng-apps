@@ -18,7 +18,7 @@ const Detail = {
 
     const _restaurant = document.createElement('dw-detail-restaurant');
     _restaurant.value = restaurant;
-    restaurantContainer.appendChild(_restaurant);
+    restaurantContainer.innerHTML = _restaurant.innerHTML;
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
