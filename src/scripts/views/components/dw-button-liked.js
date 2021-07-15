@@ -8,4 +8,6 @@ class DWButtonLiked extends HTMLElement {
   }
 }
 
-customElements.define('dw-button-liked', DWButtonLiked);
+if (!customElements.get('dw-button-liked')) {
+  customElements.define('dw-button-liked', DWButtonLiked);
+}

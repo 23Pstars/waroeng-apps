@@ -104,7 +104,7 @@ body {
   min-height: 380px;
   width: 100%;
   text-align: center;
-  background-image: url("../public/images/hero.jpg");
+  background-image: url("../public/images/hero/custom/hero-large.jpg");
   background-position: center;
   background-color: green;
 }
@@ -291,6 +291,10 @@ main {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+
+.post-item__empty {
+  margin-bottom: 16px;
 }
 
 .post {

@@ -9,7 +9,7 @@ class DWItemRestaurant extends HTMLElement {
   _render() {
     this.innerHTML = `
         <article class="post-item">
-            <img class="post-item__thumbnail" src="${config.api.restaurant.url}/images/medium/${this._data.pictureId}"
+            <img class="lazyload post-item__thumbnail" data-src="${config.api.restaurant.url}/images/medium/${this._data.pictureId}"
                 alt="${this._data.name}">
             <div class="post-item__content">
                 <p class="post-item__date">

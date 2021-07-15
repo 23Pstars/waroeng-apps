@@ -12,12 +12,18 @@ const dbPromise = openDB(config.idb.name, config.idb.version, {
 
 const RestaurantFavoriteIdb = {
   async get(id) {
+    if (!id) {
+      return;
+    }
     return (await dbPromise).get(objectName, id);
   },
   async getAll() {
     return (await dbPromise).getAll(objectName);
   },
   async put(item) {
+    if (!item.hasOwnProperty('id')) {
+      return;
+    }
     return (await dbPromise).put(objectName, item);
   },
   async delete(id) {

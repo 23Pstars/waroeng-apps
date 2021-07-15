@@ -19,11 +19,15 @@ const Favorite = {
   async afterRender() {
     const list = await RestaurantFavoriteIdb.getAll();
     const listContainer = document.querySelector('#posts');
-    list.forEach((item) => {
-      const _item = document.createElement('dw-item-restaurant');
-      _item.value = item;
-      listContainer.appendChild(_item);
-    });
+    if (list.length > 0) {
+      list.forEach((item) => {
+        const _item = document.createElement('dw-item-restaurant');
+        _item.value = item;
+        listContainer.appendChild(_item);
+      });
+    } else {
+      listContainer.innerHTML = '<div class="post-item__empty">No favorite restaurant.</div>';
+    }
   },
 };
 
